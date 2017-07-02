@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyLib;
 
 namespace TestGenerator
 {
@@ -67,7 +68,17 @@ namespace TestGenerator
                 graph[addEdge].Add(delVertex);
             }
 
+            // вывод графа
+            Console.WriteLine("Вершин в графе: {0}\n", num);
+            for (int i = 0; i < num; i++)
+            {
+                foreach (var edge in graph[i])
+                    Console.Write(edge + " ");
 
+                Console.WriteLine();
+            }
+
+            OC.Stay();
         }
     }
 }
