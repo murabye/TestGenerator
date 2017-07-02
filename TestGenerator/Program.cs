@@ -37,7 +37,7 @@ namespace TestGenerator
 
                 while (graph[i].Count != numInV)
                 {
-                    var added = rand.Next(i, num);      // генерируем случайный элемент из последующих
+                    var added = rand.Next(i + 1, num);  // генерируем случайный элемент из последующих
 
                     graph[i].Add(added);                // добавляем ребро
                     graph[added].Add(i);                // к обеим вершинам
@@ -74,7 +74,7 @@ namespace TestGenerator
             for (int i = 0; i < num; i++)
             {
                 foreach (var edge in graph[i])
-                    Console.Write(edge + " ");
+                    Console.Write(edge + 1 + " ");
 
                 Console.WriteLine();
             }
